@@ -13,9 +13,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="config.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <Folder Include="Configurations\" />
+    <Folder Include="Modules\Addons\Addon1\Admin\" />
+    <Folder Include="Modules\Addons\Addon1\General\" />
+    <Folder Include="Modules\Addons\Addon1\" />
+    <Folder Include="Modules\Core\General\" />
   </ItemGroup>
 
 </Project>
