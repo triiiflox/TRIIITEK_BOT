@@ -351,4 +351,4 @@ MigrationBackup/
 
 # Ignoring private config
 
-CyberTekBot/config.json
+config.json
