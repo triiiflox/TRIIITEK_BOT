@@ -7,7 +7,7 @@ using Discord.Commands;
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
 
-namespace CyberTekBot.Services
+namespace TRIIITekBot.Services
 {
     public class CommandHandler
     {

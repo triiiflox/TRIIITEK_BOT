@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Json;
 using Microsoft.Extensions.DependencyInjection;
-using CyberTekBot.Services;
+using TRIIITekBot.Services;
 
-namespace CyberTekBot
+namespace TRIIITekBot
 {
     class Program
     {
         // setup our fields we assign later
-        private readonly IConfiguration _config;
+        internal readonly IConfiguration _config;
         private DiscordSocketClient _client;
 
         static void Main(string[] args)
