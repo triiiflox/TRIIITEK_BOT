@@ -1,8 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>TRIIITekBot</AssemblyName>
+    <RootNamespace>TRIIITekBot</RootNamespace>
+    <ApplicationIcon>LogoTinyTrans.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,6 +21,12 @@
     <Folder Include="Modules\Addons\Addon1\General\" />
     <Folder Include="Modules\Addons\Addon1\" />
     <Folder Include="Modules\Core\General\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
