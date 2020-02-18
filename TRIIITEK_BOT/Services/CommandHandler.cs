@@ -37,6 +37,7 @@ namespace TRIIITekBot.Services
         {
             // register modules that are public and inherit ModuleBase<T>.
             await _commands.AddModulesAsync(Assembly.GetEntryAssembly(), _services);
+            Resources.Variables.Commands = _commands;
         }
 
         // this class is where the magic starts, and takes actions upon receiving messages
@@ -58,6 +59,9 @@ namespace TRIIITekBot.Services
 
             // get prefix from the configuration file
             string prefix = _config["Prefix"];
+
+            // load prefix into global variables
+            Resources.Variables.Prefix = prefix;
 
             // determine if the message has a valid prefix, and adjust argPos based on prefix
             if (!(message.HasMentionPrefix(_client.CurrentUser, ref argPos) || message.HasStringPrefix(prefix, ref argPos)))

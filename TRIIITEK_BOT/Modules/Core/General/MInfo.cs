@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace TRIIITekBot.Modules.Core.General
 {
-    class MInfo : ModuleBase
+    [Name("Info")]
+    [Summary("Gives general info about the bot.")]
+    public class MInfo : ModuleBase
     {
-        private IConfiguration _Config = new TRIIITekBot.Program()._config;
         [Command("info")]
         public Task Info()
         {
@@ -17,7 +18,7 @@ namespace TRIIITekBot.Modules.Core.General
                 $"     **TRIIITek_Bot Version: [PLACEHOLDER]**" +
                 $"*A Collaberation between TRIIIFLOX and CyberTek.*" +
                 $"" +
-                $"For help type `{_Config["Prefix"]}help`");
+                $"For help type `{Resources.Variables.Prefix}help`");
         }
     }
 }
