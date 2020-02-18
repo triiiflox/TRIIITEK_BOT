@@ -20,6 +20,7 @@
     <Folder Include="Modules\Addons\Addon1\Admin\" />
     <Folder Include="Modules\Addons\Addon1\General\" />
     <Folder Include="Modules\Addons\Addon1\" />
+    <Folder Include="Modules\Core\Admin\" />
     <Folder Include="Modules\Core\General\" />
   </ItemGroup>
 
