@@ -10,6 +10,7 @@ namespace TRIIITekBot.Modules.Core.General
     class MInfo : ModuleBase
     {
         private IConfiguration _Config = new TRIIITekBot.Program()._config;
+        [Command("info")]
         public Task Info()
         {
             return ReplyAsync(
