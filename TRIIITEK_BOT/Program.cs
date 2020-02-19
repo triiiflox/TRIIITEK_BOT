@@ -31,6 +31,9 @@ namespace TRIIITekBot
 
             // build the configuration and assign to _config          
             _config = _builder.Build();
+
+            // start uptime stopwatch
+            Resources.Variables.StartupTime = DateTime.Now;
         }
 
         public async Task MainAsync()
@@ -54,6 +57,7 @@ namespace TRIIITekBot
 
                 // we get the CommandHandler class here and call the InitializeAsync method to start things up for the CommandHandler service
                 await services.GetRequiredService<CommandHandler>().InitializeAsync();
+
 
                 await Task.Delay(-1);
             }
