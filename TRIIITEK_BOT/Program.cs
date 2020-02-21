@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Json;
 using Microsoft.Extensions.DependencyInjection;
-using CyberTekBot.Services;
+using TRIIITekBot.Services;
 
-namespace CyberTekBot
+namespace TRIIITekBot
 {
     class Program
     {
         // setup our fields we assign later
-        private readonly IConfiguration _config;
+        internal readonly IConfiguration _config;
         private DiscordSocketClient _client;
 
         static void Main(string[] args)
@@ -31,6 +31,9 @@ namespace CyberTekBot
 
             // build the configuration and assign to _config          
             _config = _builder.Build();
+
+            // start uptime stopwatch
+            Resources.Variables.StartupTime = DateTime.Now;
         }
 
         public async Task MainAsync()
@@ -54,6 +57,7 @@ namespace CyberTekBot
 
                 // we get the CommandHandler class here and call the InitializeAsync method to start things up for the CommandHandler service
                 await services.GetRequiredService<CommandHandler>().InitializeAsync();
+
 
                 await Task.Delay(-1);
             }
